@@ -1,40 +1,50 @@
-// users-model.js - A mongoose model
+// business-model.js - A mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-
 module.exports = function (app) {
-  const modelName = 'users';
+  const modelName = 'business';
   const mongooseClient = app.get('mongooseClient');
+  // const { Schema } = mongooseClient;
   const schema = new mongooseClient.Schema({
 
-    fullname: {
+    _user: { type: String, ref: 'users' },
+    name: {
       type: String
     },
-    email: {
+    short_description: {
       type: String,
-      unique: true,
-      lowercase: true
     },
-    telephone: {
+    business_image: {
+      id: {
+        type: String,
+        unique: true
+      },
+      url: {
+        type: String,
+        unique: true
+      }
+    },
+    lat: {
       type: Number
     },
-    password: {
-      type: String
-    },
-    // business: [{
-    //   type: mongoose.ObjectId,
-    //   ref: 'business'
-    // }],
 
-    googleId: {
+    long: {
+      type: Number
+    },
+
+    direction: {
       type: String
     },
 
-    facebookId: {
-      type: String
+    rating: {
+      type: Number
     },
 
+    categorie: {
+      type: String,
+      lowercase: true
+    }
   }, {
     timestamps: true
   });
