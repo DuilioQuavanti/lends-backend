@@ -1,51 +1,37 @@
-// users-model.js - A mongoose model
+// products-model.js - A mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-
 module.exports = function (app) {
-  const modelName = 'users';
+  const modelName = 'products';
   const mongooseClient = app.get('mongooseClient');
-  const schema = new mongooseClient.Schema({
-
-    fullname: {
+  const { Schema } = mongooseClient;
+  const schema = new Schema({
+    _business: {
       type: String
     },
-    email: {
-      type: String,
-      unique: true,
-      lowercase: true
+    name: {
+      type: String
     },
-    telephone: {
+    short_description: {
+      type: String,
+    },
+    rental_price: {
       type: Number
     },
-    password: {
-      type: String
-    },
-    business: {
-      type: String,
-      ref: 'business',
-      unique: true
-    },
-    address: {
-      street: {
-        type: String
+    product_image: {
+      id: {
+        type: String,
+        unique: true
       },
-      city: {
-        type: String
-      },
-      postal_code: {
-        type: String
+      url: {
+        type: String,
+        unique: true
       },
     },
-
-    googleId: {
-      type: String
-    },
-
-    facebookId: {
-      type: String
-    },
+    quantity: {
+      type: Number
+    }
 
   }, {
     timestamps: true

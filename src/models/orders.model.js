@@ -22,6 +22,9 @@ module.exports = function (app) {
       total: {
         type: Number,
       },
+      status: {
+        type: String,
+      },
       stripeId: {
         type: String
       }

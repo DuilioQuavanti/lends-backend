@@ -41,7 +41,7 @@ module.exports = function (app) {
       type: Number
     },
 
-    categorie: {
+    category: {
       type: String,
       lowercase: true
     }
