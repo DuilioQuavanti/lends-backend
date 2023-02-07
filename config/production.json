@@ -26,6 +26,23 @@
     "local": {
       "usernameField": "email",
       "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/",
+      "google": {
+        "key": "<google oauth key>",
+        "secret": "<google oauth secret>",
+        "scope": [
+          "email",
+          "profile",
+          "openid"
+        ]
+      },
+      "facebook": {
+        "key": "<facebook oauth key>",
+        "secret": "<facebook oauth secret>"
+      }
     }
-  }
+  },
+  "mongodb": "mongodb+srv://duilio:duilio123@cluster0.own3g3l.mongodb.net/?retryWrites=true&w=majority"
 }
