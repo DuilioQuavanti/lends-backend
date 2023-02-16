@@ -13,8 +13,6 @@ module.exports = function (app) {
       },
       description: {
         type: String,
-        unique: true,
-        lowercase: true,
       },
     },
     {
