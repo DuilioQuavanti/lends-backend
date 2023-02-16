@@ -8,42 +8,13 @@ module.exports = function (app) {
   const mongooseClient = app.get("mongooseClient");
   const schema = new mongooseClient.Schema(
     {
-      fullname: {
+      name: {
         type: String,
       },
-      email: {
+      description: {
         type: String,
         unique: true,
         lowercase: true,
-      },
-      telephone: {
-        type: Number,
-      },
-      password: {
-        type: String,
-      },
-      business: {
-        type: String,
-        ref: "business",
-      },
-      address: {
-        street: {
-          type: String,
-        },
-        city: {
-          type: String,
-        },
-        postal_code: {
-          type: String,
-        },
-      },
-
-      googleId: {
-        type: String,
-      },
-
-      facebookId: {
-        type: String,
       },
     },
     {

@@ -2069,6 +2069,15 @@
     "@feathersjs/errors" "^4.5.8"
     "cloudinary" "^1.22.0"
 
+"feathers-mongodb@^6.4.1":
+  "integrity" "sha512-EZssrp/EIeMxQ3qzNOdlXbUoTXOKvwCMsuYZ5JuPsahRjQluxPEY2WIKmBAzFi4/Jgfl+JhQQLxceRTjZlsynw=="
+  "resolved" "https://registry.npmjs.org/feathers-mongodb/-/feathers-mongodb-6.4.1.tgz"
+  "version" "6.4.1"
+  dependencies:
+    "@feathersjs/adapter-commons" "^4.5.11"
+    "@feathersjs/commons" "^4.5.11"
+    "@feathersjs/errors" "^4.5.11"
+
 "feathers-mongoose@^8.5.1":
   "integrity" "sha512-ZP2Ztt+UIRKD+6Qyr8ajPPhhoi3Kq+7oBPaxUeXlNmxkF7C0N3/rZhF3cuk3OdQgGLMqIVqewhlL7va380NU/w=="
   "resolved" "https://registry.npmjs.org/feathers-mongoose/-/feathers-mongoose-8.5.1.tgz"
@@ -3300,7 +3309,7 @@
   dependencies:
     "minimist" "^1.2.6"
 
-"mongodb-connection-string-url@^2.5.3":
+"mongodb-connection-string-url@^2.5.3", "mongodb-connection-string-url@^2.5.4":
   "integrity" "sha512-SeAxuWs0ez3iI3vvmLk/j2y+zHwigTDKQhtdxTgt5ZCOQQS5+HW4g45/Xw5vzzbn7oQXCNQ24Z40AkJsizEy7w=="
   "resolved" "https://registry.npmjs.org/mongodb-connection-string-url/-/mongodb-connection-string-url-2.5.4.tgz"
   "version" "2.5.4"
@@ -3318,6 +3327,18 @@
     "safe-buffer" "^5.1.2"
   optionalDependencies:
     "saslprep" "^1.0.0"
+
+"mongodb@^4.14.0":
+  "integrity" "sha512-coGKkWXIBczZPr284tYKFLg+KbGPPLlSbdgfKAb6QqCFt5bo5VFZ50O3FFzsw4rnkqjwT6D8Qcoo9nshYKM7Mg=="
+  "resolved" "https://registry.npmjs.org/mongodb/-/mongodb-4.14.0.tgz"
+  "version" "4.14.0"
+  dependencies:
+    "bson" "^4.7.0"
+    "mongodb-connection-string-url" "^2.5.4"
+    "socks" "^2.7.1"
+  optionalDependencies:
+    "@aws-sdk/credential-providers" "^3.186.0"
+    "saslprep" "^1.0.3"
 
 "mongodb@4.9.1":
   "integrity" "sha512-ZhgI/qBf84fD7sI4waZBoLBNJYPQN5IOC++SBCiPiyhzpNKOxN/fi0tBHvH2dEC42HXtNEbFB0zmNz4+oVtorQ=="
@@ -4147,7 +4168,7 @@
     "debug" "4"
     "socks" "^2.3.3"
 
-"socks@^2.3.3", "socks@^2.7.0":
+"socks@^2.3.3", "socks@^2.7.0", "socks@^2.7.1":
   "integrity" "sha512-7maUZy1N7uo6+WVEX6psASxtNlKaNVMlGQKkG/63nEDdLOWNbiUMoLK7X4uYoLhQstau72mLgfEWcXcwsaHbYQ=="
   "resolved" "https://registry.npmjs.org/socks/-/socks-2.7.1.tgz"
   "version" "2.7.1"
