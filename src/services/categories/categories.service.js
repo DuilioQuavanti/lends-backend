@@ -1,6 +1,6 @@
 // Initializes the `categories` service on path `/categories`
 const { Categories } = require("./categories.class");
-const createModel = require("../../models/orders.model");
+const createModel = require("../../models/categories.model");
 const hooks = require("./categories.hooks");
 
 module.exports = function (app) {

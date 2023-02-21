@@ -10,9 +10,6 @@ const configuration = require("@feathersjs/configuration");
 const express = require("@feathersjs/express");
 const socketio = require("@feathersjs/socketio");
 
-const session = require("express-session");
-const MemoryStore = require("memorystore")(session);
-
 const middleware = require("./middleware");
 const services = require("./services");
 const appHooks = require("./app.hooks");
@@ -21,8 +18,6 @@ const channels = require("./channels");
 const authentication = require("./authentication");
 
 const mongoose = require("./mongoose");
-
-const mongodb = require('./mongodb');
 
 const app = express(feathers());
 
@@ -37,29 +32,16 @@ app.use(
 app.use(cors());
 app.use(compress());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(favicon(path.join(app.get("public"), "favicon.ico")));
 // Host the public folder
 app.use("/", express.static(app.get("public")));
-
-app.use(
-  session({
-    cookie: { maxAge: 86400000 },
-    store: new MemoryStore({
-      checkPeriod: 86400000, // prune expired entries every 24h
-    }),
-    resave: false,
-    secret: "keyboard cat",
-  })
-);
 
 // Set up Plugins and providers
 app.configure(express.rest());
 app.configure(socketio());
 
 app.configure(mongoose);
-
-app.configure(mongodb);
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);

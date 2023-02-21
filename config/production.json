@@ -43,6 +43,5 @@
         "secret": "<facebook oauth secret>"
       }
     }
-  },
-  "mongodb": "mongodb+srv://duilio:duilio123@cluster0.own3g3l.mongodb.net/?retryWrites=true&w=majority"
+  }
 }

@@ -4,7 +4,7 @@
 // for more of what you can do here.
 
 module.exports = function (app) {
-  const modelName = "users";
+  const modelName = "categories";
   const mongooseClient = app.get("mongooseClient");
   const schema = new mongooseClient.Schema(
     {

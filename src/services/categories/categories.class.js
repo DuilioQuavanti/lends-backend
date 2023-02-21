@@ -1,11 +1,3 @@
-const { Service } = require('feathers-mongodb');
+const { Service } = require("feathers-mongoose");
 
-exports.Categories = class Categories extends Service {
-  constructor(options, app) {
-    super(options);
-    
-    app.get('mongoClient').then(db => {
-      this.Model = db.collection('categories');
-    });
-  }
-};
+exports.Categories = class Categories extends Service {};
