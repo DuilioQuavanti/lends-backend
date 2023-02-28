@@ -24,22 +24,21 @@ module.exports = function (app) {
           unique: true,
         },
       },
-      lat: {
-        type: Number,
-      },
+      location: {
+        lat: {
+          type: Number,
+        },
 
-      long: {
-        type: Number,
+        long: {
+          type: Number,
+        },
       },
-
-      direction: {
+      formatted_address: {
         type: String,
       },
-
       rating: {
         type: Number,
       },
-
       category: {
         type: String,
         lowercase: true,
