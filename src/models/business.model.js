@@ -41,7 +41,7 @@ module.exports = function (app) {
       },
       category: {
         type: String,
-        lowercase: true,
+        // lowercase: true,
       },
     },
     {
