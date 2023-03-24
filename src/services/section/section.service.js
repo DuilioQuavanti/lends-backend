@@ -32,7 +32,7 @@ module.exports = function (app) {
   const options = {
     Model: createModel(app),
     paginate: app.get("paginate"),
-    multi: ["create"],
+    multi: ["create", "patch"],
   };
 
   // Initialize our service with any options it requires
